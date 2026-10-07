@@ -4,6 +4,8 @@
 [petdex.dev](https://petdex.dev) сидит на поле ввода открытой сессии и показывает, что она делает - теми же кадрами,
 что у питомцев Petdex в Codex и Claude Code:
 
+<img src="icon.png" width="256" alt="Petdex">
+
 | Сессия | Питомец |
 |---|---|
 | работает | бежит |

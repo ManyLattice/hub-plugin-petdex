@@ -2,7 +2,11 @@
 .pd-seat { position: relative; height: 0; pointer-events: none; }
 /* место над полем ввода, где кроме питомца ничего нет, — без своей рамки и отступов: питомец сидит на поле */
 .slot-host.composer:has(> .pd-seat:only-child) { border: 0; padding: 0; background: none; min-height: 0; margin: 0; }
-.pd-seat .pd-sprite { position: absolute; right: 96px; bottom: -10px; z-index: 2; pointer-events: auto; cursor: pointer; }
+.pd-seat .pd-sprite { position: absolute; right: 96px; bottom: -10px; z-index: 2; pointer-events: auto; cursor: grab;
+  touch-action: none; user-select: none; }
+.pd-seat .pd-sprite:active { cursor: grabbing; }
+.pd-head { display: inline-flex; align-items: center; line-height: 0; margin: -4px 0; }
+.pd-head .pd-sprite { cursor: pointer; }
 .pd-sprite { background-repeat: no-repeat; image-rendering: auto; flex: none; }
 .pd-now { display: flex; align-items: center; gap: var(--space-3, 12px); }
 .pd-now .hint { margin: 2px 0 0; }

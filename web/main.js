@@ -217,6 +217,7 @@ export default function register(api) {
         seats.add(root);
       }
       showSeats();
+      sprites.add(root.pet);   // tick() drops sprites of detached roots; the slot root is cached per session and comes back
       const s = ctx?.session, me = root.pet, was = me.state;
       me.state = stateOf(s);
       if (was === "running" && me.state === "idle") play(me, "jumping");   // ход закончен
